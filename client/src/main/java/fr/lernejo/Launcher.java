@@ -1,5 +1,6 @@
 package fr.lernejo;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.Scanner;
@@ -7,6 +8,7 @@ import java.util.Scanner;
 @SpringBootApplication
 public class Launcher {
     public static void main(String[] args) {
+        SpringApplication.run(Launcher.class, args);
         Scanner entry = new Scanner(System.in);
         String s;
         do{
