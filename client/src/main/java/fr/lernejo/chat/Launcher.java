@@ -14,9 +14,10 @@ public class Launcher {
         RabbitTemplate rabbitTemplate = context.getBean(RabbitTemplate.class);
         Scanner entry = new Scanner(System.in);
         String send;
+
         do{
             send = entry.nextLine();        
-            rabbitTemplate.convertAndSend("chat_message", send);
+            rabbitTemplate.convertAndSend("chat_messages", send);
             System.out.println("Message sent");
         }while (!send.equals("q"));
         context.close();
